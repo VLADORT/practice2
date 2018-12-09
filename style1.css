@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.logo__container {
+    background: url('Black_flag.svg') center top / cover;
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo__container-text {
+    text-align: center;
+    align-self: center;
+    width: 100%;
+    height: auto;
+    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: brown;
+    margin: 0 auto;
+    font-size: 3rem;
+}
+
+.menu {
+    height: 8vh;
+    width: 100%;
+    background: #000;
+}
+
+.menu__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu__container li {
+    border-right: 0.5px groove grey;
+    border-left: 1px groove grey;
+    list-style: none;
+    height: 8vh;
+    width: auto;
+    justify-content: center;
+    display: block;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    -moz-transition: 0.8s;
+    -ms-transition: 0.8s;
+    -o-transition: 0.8s;
+}
+
+.menu__container li:hover {
+    background: darkred;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.menu__container a {
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    margin: 2vh;
+    text-decoration: none;
+}
+
+.menu__icon {
+    width: 45px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu__icon span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #333333;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+.menu__icon span:nth-child(1) {
+    top: 0px;
+}
+
+.menu__icon span:nth-child(2),
+.menu__icon span:nth-child(3) {
+    top: 13px;
+}
+
+.menu__icon span:nth-child(4) {
+    top: 26px;
+}
+
+.menu_state_open .menu__icon span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu_state_open .menu__icon span:nth-child(2) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.menu_state_open .menu__icon span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.menu_state_open .menu__icon span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+
+.menu_state_open .menu__links {
+    display: block;
+}
+
+.menu__icon-container {
+    width: 10vh;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption a {
+    text-decoration: none;
+    font-size: 5rem;
+    font-weight: bold;
+    color: crimson;
+}
+
+.carousel-caption p {
+    font-size: 3rem;
+    color: darkorange;
+}
+
+.carousel-caption {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.block {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(216, 32, 32);
+}
+
+.block__item {
+    width: 30%;
+    height: 20vh;
+    background: rgb(7, 116, 224);
+}
+
+.block__item-done {
+    width: 80%;
+    height: 30vh;
+    background: rgb(32, 224, 7);
+}
+
+@media screen and (max-width: 680px) {
+    .menu {
+        height: max-content;
+        width: 100%;
+        background: #000;
+    }
+    .menu__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .menu__container li {
+        border-right: 0.5px groove grey;
+        border-left: 1px groove grey;
+        list-style: none;
+        height: 8vh;
+        width: 60vh;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        transition: 0.8s;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -ms-transition: 0.8s;
+        -o-transition: 0.8s;
+    }
+}
