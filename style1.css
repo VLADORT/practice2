@@ -221,4 +221,10 @@
         -ms-transition: 0.8s;
         -o-transition: 0.8s;
     }
+    .carousel-caption a {
+        font-size: 8vmin;
+    }
+    .carousel-caption p {
+        font-size: 5vmin;
+    }
 }
